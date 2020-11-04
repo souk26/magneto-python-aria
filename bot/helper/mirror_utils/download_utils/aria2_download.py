@@ -26,7 +26,7 @@ class AriaDownloadHelper(DownloadHelper):
         smsg = gdrive.drive_slist(sname)
         if STOP_DUPLICATE_MIRROR:
             if smsg:
-                dl.getListener().onDownloadError(f'<code>File is already Uploaded in drive.<code>\n\n Here are the search results:👇👇 \n\n{smsg}')
+                dl.getListener().onDownloadError(f'<code>File is already available in drive.</code>\n\n Here are the search results:👇👇 \n\n{smsg}')
                 aria2.remove([download])
             return
         update_all_messages()
